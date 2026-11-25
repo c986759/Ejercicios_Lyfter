@@ -1,0 +1,6 @@
+print("Este es un ejemplo")
+print("de como imprimir")
+print("varias lineas de texto")
+print("para el curso de")
+print("Lyfter")
+print("new_line")
