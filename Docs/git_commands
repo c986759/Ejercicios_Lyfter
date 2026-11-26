@@ -1,0 +1,76 @@
+# en nuestra pc, creamos la carpeta donde vamos a trabajar nuestros proyectos
+ejemplo en D:\Ejercicios_lyfter
+
+abrimos vs code en esa carpeta
+desde terminal entramos a la carpeta cd D:\Ejercicios_lyfter
+una vez dentro ejecutamos este comando el cual abrira vscode en esa carpeta
+code .
+
+# en github
+creamos el repositorio
+lo clonamos a nuestra pc, usamos el link que genera github en el boton code
+ejemplo:
+https://github.com/c986759/Ejercicios_Lyfter.git
+
+una vez tenemos el link, en la terminal
+git clone https://github.com/tu_usuario/Ejercicios_Lyfter.git
+
+esto nos trae el contenido completo del repositorio a nuestra carpeta en la pc
+
+# ahora crear un nuevo branch, es una rama aparte para no afectar directamente el main del repositorio online, con cambios que aun no se revisan.
+#normalmente new-branch-name llevaria el nombre de los ejercicios que vamos a presentar.
+
+git checkout -b new-branch-name
+
+# una vez que tenemos las carpetas/archivos nuevos que vamos creando en nuestra pc, lo siguiente sera subir esa nueva rama con sus carpetas y archivos a github, con estos comandos, ejecutar uno por uno
+
+git status        (este nos da info de archivos nuevos o que modificamos y si estan agregados al commit que estamos creando)
+git add .
+git commit -m "mensaje descriptivo de los cambios o mejoras realizadas"
+git push --set-upstream origin name_of_the_branch
+
+# este comando push la primera vez ue subamos este nuevo branch sera asi de largo, si posteriormente hacemos algun cambio solo sera git push
+# este comando manda esa info a github, y crea ese branch por aparte del main en github
+
+# una vez que veamos todo creado en github, se procede a hacer el pull request.
+# Debes seleccionar la rama de destino y de origen:
+# base: Es la rama destino (normalmente main), donde queremos que viva nuestro código final.
+# compare: Es la rama donde subimos nuestros cambios.
+# Hacemos clic en el botón verde "Create pull request"
+# este lo que hace es crear un hilo que genera un link, ejemplo:
+# https://github.com/c986759/Ejercicios_Lyfter/pull/2
+# este link lo usan las personas encargadas de revisar el trabajo que subiste y asegurarse que esta correcto, si esta correcto se hace merge, esto lo mandaria al main ya revisado.
+# caso contrario si se requiere una revision, hacemos las correcciones en vs code y hacemos un nuevo commit con las revisiones aplicadas:
+# git status   git add .   git commit -m "cambios o mejoras realizadas"
+# git push 
+
+# una vez que el coach revise los cambios y esten correctos, se hace el merge
+# para esto usamos el  boton Merge pull request
+# esto actualiza el main con los cambios ya revisados.
+
+# y este ciclo se repite
+# al iniciar un nuevo ejercicio o mejora del codigo
+# primero actualizamos el main en nuestra pc con los ultimos cambios de github
+# ES PRIMORDIAL HACER ESTE PASO NO SE PUEDE OLVIDAR
+git checkout main
+git pull
+
+# seguido creamos el nuevo branch, que usaremos para subir a github
+git checkout -b new-code-exercise
+# creamos las carpetas y archivos nuevos
+# hacemos commint del nuevo branch
+# en github creamos el pull request para revision.
+# pasamos el link a los coach para revision
+# si hay peticion de cambios, hacemos las correcciones y volvemos a hacer commt
+# una vez aprobado el codigo hacemos merge para actualizar el main.
+# y repetimos el ciclo una y otra vez
+
+
+# un ultimo comando nos muestra el historial
+git log
+
+
+
+
+
+
